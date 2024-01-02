@@ -4,6 +4,9 @@ title: "[Bug]: puddle of poo 2"
 
 ### Contact Details
 
+![swallows](./a2c971aa-47c2-4537-9e19-64567a1b1943)
+
+
 _No response_
 
 ### What happened?
