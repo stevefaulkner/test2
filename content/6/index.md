@@ -3,6 +3,7 @@ title: "[Bug]: puddle of poo"
 ---
 
 ### Contact Details
+![me and lionel at tpac](./68781829-81ba-4893-b500-f1322b2bda9a)
 
 _No response_
 
