@@ -1,5 +1,5 @@
 ---
-title: "[Bug]: puddle"
+title: "[Bug]: puddle of poo"
 ---
 
 ### Contact Details
