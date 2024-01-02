@@ -6,14 +6,13 @@ title: "[Bug]: puddle of poo 2"
 
 ![swallows](./a2c971aa-47c2-4537-9e19-64567a1b1943)
 
-
 _No response_
 
-### What happened?
+## What happened?
 
 A bug happened!
 
-### Version
+## Version
 
 1.0.2 (Default)
 
@@ -27,4 +26,4 @@ _No response_
 
 ### Code of Conduct
 
-- [X] I agree to follow this project's Code of Conduct
+*   [x] I agree to follow this project's Code of Conduct
