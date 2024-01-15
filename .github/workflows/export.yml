@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Example Action
-        uses: action.yml
+        uses: actions/action.yml
         # ONGOING-Z/transfer-issue-to-md-file@v1.0.1
         with:
           my-token: ${{ secrets.ISSUETOMD }}
