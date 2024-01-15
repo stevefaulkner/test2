@@ -16,14 +16,15 @@ jobs:
           repo: 'test2'
           owner: 'stevefaulkner'
           skip-author: 'utterances-bot'
-          use-issue-seperator: 'false'
+          skip-pull-requests: 'true'
+          use-issue-seperator: 'true'
           output: 'content/posts'
       - name: Commit files
         run: |
           git config --local user.email "sfaulkner@gmail.com"
           git config --local user.name "steve faulkner"
           git add .
-          git commit -m "Add Posts"
+          git commit -m "Add Issues"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
