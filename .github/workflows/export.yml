@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Export issues
-      uses: niteoweb/export-issues-action@v2
+      uses: teamniteo/export-issues-action@v2
       with:
         repo: ${{ github.test2 }}
         org: ${{ github.stevefaulkner }}
