@@ -1,0 +1,14 @@
+name: CI
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Example Action
+        uses: action.yml
+        # ONGOING-Z/transfer-issue-to-md-file@v1.0.1
+        with:
+          my-token: ${{ secrets.ISSUETOMD }}
+          path: "./test"
