@@ -1,14 +1,19 @@
 name: CI
 on: workflow_dispatch
-
 jobs:
-  build:
+  deploy:
+    name: Export issues to S3
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Example Action
-        uses: actions/action.yml
-        # ONGOING-Z/transfer-issue-to-md-file@v1.0.1
-        with:
-          my-token: ${{ secrets.ISSUETOMD }}
-          path: "./test"
+    - name: Export issues
+      uses: niteoweb/export-issues-action@v2
+      with:
+        repo: ${{ github.test2 }}
+        org: ${{ github.stevefaulkner }}
+        repo-token: ${{ secrets.ISSUETOMD }}
+        out: issues
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: issues
+        path: "issues/*.md"
