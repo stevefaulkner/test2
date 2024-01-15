@@ -10,7 +10,7 @@ jobs:
       with:
         repo: ${{ github.test2 }}
         org: ${{ github.stevefaulkner }}
-        repo-token: ${{ secrets.ISSUETOMD }}
+        repo-token: ${{ secrets.TOOT }}
         out: issues
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
