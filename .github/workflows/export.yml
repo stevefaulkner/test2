@@ -1,19 +1,31 @@
-name: CI
-on: workflow_dispatch
+name: "Convert issues to markdowns"
+on:
+  workflow_dispatch:
+    
 jobs:
-  deploy:
-    name: Export issues to S3
+  convert_issues_to_markdown_job:
     runs-on: ubuntu-latest
+    name: Convert issues to markdowns.
     steps:
-    - name: Export issues
-      uses: teamniteo/export-issues-action@v2
-      with:
-        repo: ${{ github.test2 }}
-        org: ${{ github.stevefaulkner }}
-        repo-token: ${{ secrets.TOOT }}
-        out: issues
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: issues
-        path: "issues/*.md"
+      - name: checkout
+        uses: actions/checkout@v1
+      - name: Fetch issues and generate markdowns
+        uses: skyfe79/hugo-with-github-issues@v1.3
+        with:
+          github-token: ${{ secrets.toot }}
+          repo: 'testing-hugo-with-github-issues'
+          owner: 'skyfe79'
+          skip-author: 'utterances-bot'
+          use-issue-seperator: 'false'
+          output: 'content/posts'
+      - name: Commit files
+        run: |
+          git config --local user.email "sfaulkner@gmail.com"
+          git config --local user.name "steve faulkner"
+          git add .
+          git commit -m "Add Posts"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.toot }}
+          branch: ${{ github.ref }}
