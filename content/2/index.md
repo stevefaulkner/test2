@@ -3,6 +3,7 @@ title: "[Bug]: 2"
 ---
 
 ### Contact Details
+![dean](./c714de7d-c9a4-4262-9101-d49f0df9c607.png)
 
 _No response_
 
